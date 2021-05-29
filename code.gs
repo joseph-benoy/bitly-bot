@@ -5,9 +5,9 @@ function isValidWebUrl(url) {
 }
 function getUrl(inputUrl) {
   let endPoint = "https://api-ssl.bitly.com/v4/shorten";
-  let token = "5239a69d495a46f4540de4c17cc9ec1e9268f6f5";
+  let token = "1234567890";   //your bitly OAuth token
   let payload = {
-    "group_guid": "Bl5t3bPgWXB",  
+    "group_guid": "123456789",   //your bitly group id
     "domain": "bit.ly",  
     "long_url": inputUrl
   } ; 
@@ -48,7 +48,8 @@ function doPost(e){
     }
 
   }
-  let endPoint = "https://api.telegram.org/bot1883052135:AAFf47gC9ofYxsm7B1tdzV3D-9Uc3nbsdkI/sendMessage";
+   const botToken = "1234567890";   //your telegram bot token
+  let endPoint = "https://api.telegram.org/bot"+botToken+"/sendMessage";
   const options = {
     method:'post',
     contentType: 'application/json',
