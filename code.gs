@@ -4,7 +4,7 @@ function isValidWebUrl(url) {
 }
 function getUrl(inputUrl) {
   let endPoint = "https://api-ssl.bitly.com/v4/shorten";
-  let bitlyToken = "1234567890";   //your bitly OAuth token
+  const bitlyToken = "1234567890";   //your bitly OAuth token
   let payload = {
     "group_guid": "123456789",   //your bitly group id
     "domain": "bit.ly",  
